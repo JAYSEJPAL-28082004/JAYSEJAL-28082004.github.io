@@ -6,15 +6,17 @@
     <title>Home - JAY SEJPAL</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="research.html">Stock Research</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="research.html"><i class="fas fa-chart-line"></i> Stock Research</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
             </ul>
+            <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></button>
         </nav>
     </header>
 
@@ -24,17 +26,16 @@
             <h2 class="welcome-heading">Welcome</h2>
             <div class="content">
                 <p>Welcome to JaySejpal.com</p>
-                <p><strong>Deep Dives into Indian Businesses, Built on Logic & Fundamentals</strong></p>
-                <p>JaySejpal.com is a hub for structured, in-depth research on publicly listed Indian companies — designed for investors, analysts, and curious minds who want to cut through noise and understand what truly drives a business.</p>
-                <p>Each company thesis on this platform is backed by financial models, sector dynamics, growth drivers, competitive moats, and valuation logic. No fluff — just grounded, well-reasoned insights shaped by experience in project financing, audit, and investment analysis.</p>
-                <p><strong>Explore:</strong></p>
+                <p><strong>Unraveling Indian Businesses with Logic & Insight</strong></p>
+                <p>JaySejpal.com offers in-depth, structured research on publicly listed Indian companies — crafted for investors, analysts, and curious minds who crave clarity amidst market noise.</p>
+                <p><strong>What You’ll Find:</strong></p>
                 <ul>
-                    <li>📊 <strong>Thorough Business Breakdowns</strong> — from revenue models to cost structures</li>
-                    <li>📈 <strong>Valuation Models</strong> — using DCF, comparables, and scenario analysis</li>
-                    <li>🧩 <strong>Strategic Insights</strong> — into sectors, risks, and future growth triggers</li>
-                    <li>📥 <strong>Downloadable Excel Sheets</strong> — transparent and editable for your own use</li>
+                    <li>📊 <strong>Detailed Business Analysis</strong> — dissecting revenue streams, cost structures, and growth levers</li>
+                    <li>📈 <strong>Valuation Frameworks</strong> — using DCF, comparables, and scenario-based models</li>
+                    <li>🧠 <strong>Strategic Perspectives</strong> — on sectors, competitive moats, risks, and future catalysts</li>
+                    <li>📥 <strong>Transparent Excel Models</strong> — downloadable and editable for your own analysis</li>
                 </ul>
-                <p>The goal is simple: to bridge practical finance and real-world business understanding — one company at a time.</p>
+                <p>My mission is to bridge the gap between practical finance and real-world business dynamics, one company at a time. Dive in and explore!</p>
             </div>
         </section>
     </main>
@@ -42,5 +43,23 @@
     <footer>
         <p>© 2025 Jay Sejpal. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            const icon = document.querySelector('.theme-toggle i');
+            icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.body.setAttribute('data-theme', savedTheme);
+        const icon = document.querySelector('.theme-toggle i');
+        icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    </script>
 </body>
 </html>

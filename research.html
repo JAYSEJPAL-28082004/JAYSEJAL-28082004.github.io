@@ -6,15 +6,17 @@
     <title>Stock Research - JAY SEJPAL</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="research.html" class="active">Stock Research</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="research.html" class="active"><i class="fas fa-chart-line"></i> Stock Research</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
             </ul>
+            <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></button>
         </nav>
     </header>
 
@@ -32,6 +34,8 @@
                 <li><a href="geojit-financial-services.html">Geojit Financial Services</a></li>
                 <li><a href="dharmaj-crop-guard.html">Dharmaj Crop Guard Ltd</a></li>
                 <li><a href="choice-international.html">Choice International Ltd</a></li>
+                <li><a href="ace.html">Action Construction Equipment (ACE)</a></li>
+                <li><a href="monte-carlo.html">Monte Carlo</a></li>
             </ul>
         </section>
     </main>
@@ -39,5 +43,23 @@
     <footer>
         <p>© 2025 Jay Sejpal. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            const icon = document.querySelector('.theme-toggle i');
+            icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.body.setAttribute('data-theme', savedTheme);
+        const icon = document.querySelector('.theme-toggle i');
+        icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    </script>
 </body>
 </html>
