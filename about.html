@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - JAY SEJPAL</title>
+    <title>About - Jay Sejpal</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -11,10 +11,11 @@
 <body>
     <header>
         <nav>
+            <div class="logo">Jay Sejpal Equity Research</div>
             <ul>
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="research.html"><i class="fas fa-chart-line"></i> Stock Research</a></li>
-                <li><a href="about.html" class="active"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Stock Research</a></li>
+                <li><a href="about.html" class="active">About</a></li>
             </ul>
             <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></button>
         </nav>
@@ -22,18 +23,17 @@
 
     <main>
         <section id="about">
-            <h1>About Jay Sejpal</h1>
-            <div class="content">
-                <p>I’m Jay Sejpal, a CA Finalist and CFA Level 1 candidate passionate about finance, business models, and valuation. JaySejpal.com is my platform to share independent, logic-driven research on Indian public companies — grounded in practical financial analysis, not just surface-level metrics.</p>
-                <p>Inspired by thinkers like Charlie Munger, I focus on mental models, business quality, and rational investing. My work, including a popular essay on applying Munger’s multidisciplinary approach to Indian firms, emphasizes durable moats and capital allocation discipline.</p>
-                <p><strong>What to Expect:</strong></p>
+            <h1>About Me</h1>
+            <div class="about-content">
+                <p>I’m Jay Sejpal, a CA Finalist and CFA Level 1 candidate with a passion for dissecting Indian businesses through a lens of logic and value. This platform is where I share independent equity research, blending financial rigor with practical insights inspired by thinkers like Charlie Munger.</p>
+                <p>My journey began with a deep interest in how businesses create lasting value, leading me to analyze sectors from manufacturing to financial services. With a focus on mental models, I aim to empower investors with clear, actionable perspectives on India’s growth story.</p>
+                <p><strong>Key Milestones:</strong></p>
                 <ul>
-                    <li>📄 <strong>In-Depth Reports</strong> — analyzing strategies, growth drivers, risks, and industry dynamics</li>
-                    <li>📊 <strong>Valuation Models</strong> — built with DCF, comparables, and practical tools</li>
-                    <li>🧾 <strong>Transparent Excel Models</strong> — fully downloadable and editable</li>
-                    <li>📚 <strong>Sector Insights</strong> — identifying long-term trends and opportunities</li>
+                    <li>Developed a popular essay applying Munger’s multidisciplinary approach to Indian firms.</li>
+                    <li>Built detailed valuation models for over 10 public companies.</li>
+                    <li>Collaborated with industry experts to refine research methodologies.</li>
                 </ul>
-                <p>My goal is to empower investors, students, and analysts with clear, actionable insights to better understand businesses and valuations.</p>
+                <p>Expect in-depth reports, transparent Excel models, and strategic insights to navigate India’s evolving markets.</p>
             </div>
         </section>
     </main>
@@ -52,8 +52,6 @@
             const icon = document.querySelector('.theme-toggle i');
             icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
         }
-
-        // Load saved theme
         const savedTheme = localStorage.getItem('theme') || 'light';
         document.body.setAttribute('data-theme', savedTheme);
         const icon = document.querySelector('.theme-toggle i');

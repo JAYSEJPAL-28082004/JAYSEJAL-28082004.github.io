@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - JAY SEJPAL</title>
+    <title>Home - Jay Sejpal</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -11,10 +11,11 @@
 <body>
     <header>
         <nav>
+            <div class="logo">Jay Sejpal Equity Research</div>
             <ul>
-                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="research.html"><i class="fas fa-chart-line"></i> Stock Research</a></li>
-                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="research.html">Stock Research</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
             <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></button>
         </nav>
@@ -22,20 +23,20 @@
 
     <main>
         <section id="home">
-            <h1 class="site-title">Jay Sejpal Equity Research</h1>
-            <h2 class="welcome-heading">Welcome</h2>
-            <div class="content">
-                <p>Welcome to JaySejpal.com</p>
-                <p><strong>Unraveling Indian Businesses with Logic & Insight</strong></p>
-                <p>JaySejpal.com offers in-depth, structured research on publicly listed Indian companies — crafted for investors, analysts, and curious minds who crave clarity amidst market noise.</p>
-                <p><strong>What You’ll Find:</strong></p>
-                <ul>
-                    <li>📊 <strong>Detailed Business Analysis</strong> — dissecting revenue streams, cost structures, and growth levers</li>
-                    <li>📈 <strong>Valuation Frameworks</strong> — using DCF, comparables, and scenario-based models</li>
-                    <li>🧠 <strong>Strategic Perspectives</strong> — on sectors, competitive moats, risks, and future catalysts</li>
-                    <li>📥 <strong>Transparent Excel Models</strong> — downloadable and editable for your own analysis</li>
-                </ul>
-                <p>My mission is to bridge the gap between practical finance and real-world business dynamics, one company at a time. Dive in and explore!</p>
+            <div class="hero">
+                <h1>Jay Sejpal Equity Research</h1>
+                <h2>Unveiling India’s Business Potential</h2>
+                <div class="content">
+                    <p>Deep dive into India’s public companies with logic-driven insights, tailored for investors and analysts seeking clarity in a complex market.</p>
+                    <p><strong>What We Offer:</strong></p>
+                    <ul>
+                        <li>📊 In-depth Business Analysis</li>
+                        <li>📈 Valuation Models & Excel Downloads</li>
+                        <li>🧠 Strategic Sector Insights</li>
+                        <li>📚 Actionable Investment Ideas</li>
+                    </ul>
+                    <p>Explore now to unlock data-backed opportunities!</p>
+                </div>
             </div>
         </section>
     </main>
@@ -54,8 +55,6 @@
             const icon = document.querySelector('.theme-toggle i');
             icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
         }
-
-        // Load saved theme
         const savedTheme = localStorage.getItem('theme') || 'light';
         document.body.setAttribute('data-theme', savedTheme);
         const icon = document.querySelector('.theme-toggle i');

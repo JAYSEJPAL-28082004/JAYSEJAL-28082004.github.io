@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Research - JAY SEJPAL</title>
+    <title>Stock Research - Jay Sejpal</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -11,10 +11,11 @@
 <body>
     <header>
         <nav>
+            <div class="logo">Jay Sejpal Equity Research</div>
             <ul>
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="research.html" class="active"><i class="fas fa-chart-line"></i> Stock Research</a></li>
-                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html" class="active">Stock Research</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
             <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></button>
         </nav>
@@ -23,20 +24,18 @@
     <main>
         <section id="research">
             <h1>Stock Research</h1>
-            <p>Below is a curated list of companies I have analyzed in-depth, complete with detailed reports and financial models.</p>
-            <ul class="company-list">
-                <li><a href="indus-towers.html">Indus Towers</a></li>
-                <li><a href="ugro-capital.html">Ugro Capital</a></li>
-                <li><a href="shriram-pistons-and-rings.html">Shriram Pistons and Rings</a></li>
-                <li><a href="piccadily-agro-industries.html">Piccadily Agro Industries</a></li>
-                <li><a href="icra.html">ICRA</a></li>
-                <li><a href="go-digital.html">Go Digital</a></li>
-                <li><a href="geojit-financial-services.html">Geojit Financial Services</a></li>
-                <li><a href="dharmaj-crop-guard.html">Dharmaj Crop Guard Ltd</a></li>
-                <li><a href="choice-international.html">Choice International Ltd</a></li>
-                <li><a href="ace.html">Action Construction Equipment (ACE)</a></li>
-                <li><a href="monte-carlo.html">Monte Carlo</a></li>
-            </ul>
+            <div class="research-grid">
+                <div class="research-card"><a href="interarch-building-solutions.html">Interarch Building Solutions Ltd</a></div>
+                <div class="research-card"><a href="indus-towers.html">Indus Towers</a></div>
+                <div class="research-card"><a href="ugro-capital.html">Ugro Capital</a></div>
+                <div class="research-card"><a href="shriram-pistons-and-rings.html">Shriram Pistons and Rings</a></div>
+                <div class="research-card"><a href="piccadily-agro-industries.html">Piccadily Agro Industries</a></div>
+                <div class="research-card"><a href="icra.html">ICRA</a></div>
+                <div class="research-card"><a href="go-digital.html">Go Digital</a></div>
+                <div class="research-card"><a href="geojit-financial-services.html">Geojit Financial Services</a></div>
+                <div class="research-card"><a href="ace.html">Action Construction Equipment (ACE)</a></div>
+                <div class="research-card"><a href="monte-carlo.html">Monte Carlo</a></div>
+            </div>
         </section>
     </main>
 
@@ -54,8 +53,6 @@
             const icon = document.querySelector('.theme-toggle i');
             icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
         }
-
-        // Load saved theme
         const savedTheme = localStorage.getItem('theme') || 'light';
         document.body.setAttribute('data-theme', savedTheme);
         const icon = document.querySelector('.theme-toggle i');

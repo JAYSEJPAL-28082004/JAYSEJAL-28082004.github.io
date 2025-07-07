@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interarch Building Solutions Ltd - Jay Sejpal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Jay Sejpal Equity Research</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html" class="active">Stock Research</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="company-details">
+            <h1>INTERARCH BUILDING SOLUTIONS LTD</h1>
+            <div class="company-content">
+                <h2>Overview</h2>
+                <p>Interarch Building Solutions Ltd, established in 1983, specializes in turnkey pre-engineered steel construction, offering faster and cost-effective solutions for factories, warehouses, and offices. With a capacity of 160,000 MT and a diverse client base including Tata Motors and Reliance, it’s a key player in India’s infrastructure growth.</p>
+                <h2>Key Insights</h2>
+                <p><strong>Summary of Research Report:</strong> Founded in 1983, Interarch Building Solutions Ltd specializes in turnkey pre-engineered steel construction (PEB), offering faster, cost-effective solutions for factories, warehouses, and offices. With a 160,000 MT capacity and clients like Tata Motors and Reliance, it’s a leader in India’s PEB sector, benefiting from the country’s ₹51-53 trillion infrastructure investment (2025-2029). Lacks a traditional moat due to low entry barriers but builds a competitive edge through operational excellence, vertical integration (five manufacturing units), a diverse ₹1,650 crore order book, technical expertise (111 engineers), and a 40-year brand legacy. Geographical advantage and repeat business (over 50%) strengthen its position. Aligns with Peter Lynch’s “Fast Growers” checklist with a 25.58% earnings growth rate, successful expansion (e.g., Gujarat and Andhra Pradesh facilities), and a 6.5% market share in a ₹200 billion PEB industry (10.5% CAGR). However, its P/E of 35.9 suggests overvaluation. Vulnerable to steel price volatility, execution delays, and high debt risks (as seen in Richa Industries’ failure). Poor quality focus or client concentration could erode its reputation and cash flows. <strong>Investment Recommendation:</strong> Hold if acquired at lower levels; buy if valuation corrects to intrinsic value; sell if risks like debt or quality issues materialize. Sensible management and strong financials are positives, but valuation needs caution.</p>
+            </div>
+            <div class="company-links">
+                <a href="#" target="_blank" class="btn">Google Drive</a>
+                <a href="https://github.com/JAYSEJPAL-28082004/JAYSEJAL-28082004.github.io/raw/refs/heads/main/excel-models/Interarch_Excelmodel.xlsx" class="btn" download>Download Excel Model</a>
+            </div>
+            <p class="download-note">Click "Google Drive" to view all files (coming soon), or "Download Excel Model" to get the financial model directly.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Jay Sejpal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            const icon = document.querySelector('.theme-toggle i');
+            icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.body.setAttribute('data-theme', savedTheme);
+        const icon = document.querySelector('.theme-toggle i');
+        icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    </script>
+</body>
+</html>
