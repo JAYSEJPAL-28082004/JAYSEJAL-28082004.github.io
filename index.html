@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Jay Sejpal</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -17,7 +16,6 @@
                 <li><a href="research.html">Stock Research</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
-            <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></button>
         </nav>
     </header>
 
@@ -38,27 +36,27 @@
                     <p>Explore now to unlock data-backed opportunities!</p>
                 </div>
             </div>
+
+            <div class="latest">
+                <h2>Latest research</h2>
+                <div class="research-buttons">
+                    <a href="interarch-building-solutions.html" class="research-btn" data-description="Pre-engineered steel construction with a 160,000 MT capacity, driven by India’s infrastructure boom.">
+                        <span>Interarch Building Solutions Ltd</span>
+                    </a>
+                    <a href="indus-towers.html" class="research-btn" data-description="India’s largest telecom tower company, with stable revenue but tied to telecom sector health.">
+                        <span>Indus Towers</span>
+                    </a>
+                    <a href="ugro-capital.html" class="research-btn" data-description="An NBFC focused on MSME lending with a tech-driven approach, high growth but asset quality risks.">
+                        <span>Ugro Capital</span>
+                    </a>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 Jay Sejpal. All rights reserved.</p>
+        <p>© 2026 Jay Sejpal. All rights reserved.</p>
+        <p class="disclaimer">For educational purposes only. Not investment advice. Please do your own research before investing.</p>
     </footer>
-
-    <script>
-        function toggleTheme() {
-            const body = document.body;
-            const currentTheme = body.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            body.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            const icon = document.querySelector('.theme-toggle i');
-            icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-        }
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        document.body.setAttribute('data-theme', savedTheme);
-        const icon = document.querySelector('.theme-toggle i');
-        icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-    </script>
 </body>
 </html>
