@@ -418,3 +418,51 @@ footer {
         transition: none !important;
     }
 }
+/* ---------- Snapshot box (company pages) ---------- */
+.snapshot {
+    max-width: 760px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    margin-bottom: 2rem;
+}
+
+.snapshot div {
+    background: var(--bg);
+    padding: 1rem 1.1rem;
+}
+
+.snapshot .label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.snapshot .value {
+    display: block;
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.snapshot .value.accent {
+    color: var(--accent);
+}
+
+/* ---------- Latest research (home page) ---------- */
+.latest {
+    margin-top: 3.5rem;
+}
+
+.latest h2 {
+    font-size: 1.7rem;
+}
+
+/* ---------- Footer disclaimer ---------- */
+.disclaimer {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+}
