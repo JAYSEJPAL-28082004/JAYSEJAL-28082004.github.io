@@ -467,3 +467,21 @@ footer {
     margin-top: 0.5rem;
     font-size: 0.85rem;
 }
+
+/* ---------- Clickable logo and simple home page ---------- */
+nav a.logo {
+    text-decoration: none;
+}
+
+nav a.logo:hover {
+    color: var(--accent);
+}
+
+.hero-actions {
+    margin: 0 0 1.25rem;
+}
+
+.steps {
+    color: var(--muted);
+    font-size: 1.05rem;
+}
